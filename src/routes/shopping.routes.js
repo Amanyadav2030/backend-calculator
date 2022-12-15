@@ -11,9 +11,16 @@ ShoppingRouter.get('/',async(req,res)=>{
     }
 })
 ShoppingRouter.post('/',async(req,res)=>{
+    let Time = new Date();
+    let hour = Time.getHours()
+    let minutes = Time.getMinutes()
+    let seconds = Time.getSeconds()
+    minutes<10?minutes="0"+minutes:""
+    seconds<10?seconds="0"+seconds:"";
+    let time = `${hour}:${minutes}:${seconds}`
     try{
         console.log(req.body)
-        const newProduct =  new Product(req.body);
+        const newProduct =  new Product({...req.body,time});
         await newProduct.save();
         res.send(newProduct);
     }catch(e){
