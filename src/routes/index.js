@@ -1,3 +1,2 @@
-const UserRouter = require("./user.routes");
-const EmiRouter = require('./emi.routes');
-module.exports = {UserRouter,EmiRouter};
+const ShoppingRouter = require("./shopping.routes");
+module.exports = {ShoppingRouter};
