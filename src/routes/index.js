@@ -1,2 +1,3 @@
 const ShoppingRouter = require("./shopping.routes");
-module.exports = {ShoppingRouter};
+const BookmarkRouter = require("./bookmark.routes");
+module.exports = {ShoppingRouter,BookmarkRouter};

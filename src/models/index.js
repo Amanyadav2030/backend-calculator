@@ -1,3 +1,4 @@
 const Product = require("./shopping.model");
+const Bookmark = require("./bookmark.model");
 
-module.exports = {Product};
+module.exports = {Product,Bookmark};
