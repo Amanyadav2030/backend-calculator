@@ -1,14 +1,13 @@
 const express = require('express')
 const dbConnect = require('./config/db')
-const {ShoppingRouter,BookmarkRouter} = require('./routes/index');
+const {JobsRouter} = require('./routes/index');
 const cors = require('cors');
 const PORT = process.env.PORT || 8080
 const app = express()
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors())
-app.use("/shopping", ShoppingRouter)
-app.use("/bookmark", BookmarkRouter)
+app.use("/jobs", JobsRouter)
 app.get('/', (req, res) => res.send('hello'))
 
 app.listen(PORT, async() => {
