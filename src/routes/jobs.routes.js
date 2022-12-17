@@ -16,7 +16,7 @@ JobsRouter.get('/',async(req,res)=>{
     }
 })
 JobsRouter.get('/search',async(req,res)=>{
-    const {language} = req.body; 
+    const {language=""} = req.query; 
     try{ 
         let jobs = await Jobs.find({ "language" : { "$regex": language , "$options": "i" } })
         res.send(jobs);
