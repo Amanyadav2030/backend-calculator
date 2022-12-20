@@ -1,2 +1,3 @@
 const PlayerRouter = require("./player.routes");
-module.exports = {PlayerRouter};
+const RandomRouter = require('./random.routes');
+module.exports = {PlayerRouter,RandomRouter};
