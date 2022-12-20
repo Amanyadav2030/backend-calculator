@@ -1,2 +1,2 @@
-const JobsRouter = require("./jobs.routes");
-module.exports = {JobsRouter};
+const PlayerRouter = require("./player.routes");
+module.exports = {PlayerRouter};
