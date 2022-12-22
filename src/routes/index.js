@@ -1,3 +1,2 @@
-const PlayerRouter = require("./player.routes");
-const RandomRouter = require('./random.routes');
-module.exports = {PlayerRouter,RandomRouter};
+const QuestionRouter = require('./question.routes');
+module.exports = {QuestionRouter};
