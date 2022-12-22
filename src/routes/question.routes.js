@@ -13,13 +13,8 @@ QuestionRouter.get('/',async(req,res)=>{
 QuestionRouter.post('/',async(req,res)=>{
 
     try{
-        let res = await fetch('https://opentdb.com/api.php?amount=10&category=9');
-        let {results} =await res.json();
-        for(let a of  results){
-            const question =  new Question(a);
-            await question.save()
-        }
-        res.send("done");
+        const question =  new Question(req.body);
+        await question.save()
         res.send(question)
     }catch(e){
         return res.status(500).send({error:e.message});
