@@ -1,2 +1,3 @@
-const Question = require("./question.model");
-module.exports = {Question};
+const TicketModel = require("./ticket.model");
+const UserModel = require("./user.model");
+module.exports = {TicketModel,UserModel};

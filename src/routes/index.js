@@ -1,2 +1,3 @@
-const QuestionRouter = require('./question.routes');
-module.exports = {QuestionRouter};
+const TicketRouter = require('./ticket.routes');
+const UserRouter = require('./user.routes');
+module.exports = {TicketRouter,UserRouter};
